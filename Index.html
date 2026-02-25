@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="layout.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="logo" width="8%">
+        <nav>        
+            <a href="Index.html">Home</a> <br> 
+            About us:
+            <a href="About Us/history.html">History of the Church</a> |
+            <a href="About Us/staff.html">Clergy and Staff</a> |
+            <a href="About Us/biography.html">Biography of San Prancasio</a> <br>
+            Services:
+            <a href="Services/baptism.html">Baptism Guidelines</a> | 
+            <a href="Services/wedding.html">Wedding Guidelines</a> | 
+            <a href="Services/confirmation.html">Confirmation Guidelines</a> |
+            <a href="Services/funeral.html">Funeral Guidelines</a> | 
+            <a href="Services/houseblessing.html">House Blessing Guidelines</a> <br>
+        <a href="mass.html">Mass Schedule and Intentions</a> |
+        <a href="contact.html">Contact Us</a>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div class="hero">
+        <img src="main.jpg" alt="Church">
+        <h1>Welcome to San Prancasio Parish!</h1>
+    </div> 
+
+    <div id="churchSlider" class="carousel slide slider-wrapper" data-bs-ride="carousel">
+
+    <!-- Carousel -->
+    <div class="mainpage">
+        <h1>Image Gallery:</h1>
+        <!-- Dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="7"></button>
+            <button type="button" data-bs-target="#churchSlider" data-bs-slide-to="8"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Gallery/Gallery1.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery1.jpg" alt="Gallery 1">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery2.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery2.jpg" alt="Gallery 2">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery3.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery3.jpg" alt="Gallery 3">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery4.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery4.jpg" alt="Gallery 4">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery5.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery5.jpg" alt="Gallery 5">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery6.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery6.jpg" alt="Gallery 6">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery7.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery7.jpg" alt="Gallery 7">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery8.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery8.jpg" alt="Gallery 8">
+            </div>
+            <div class="carousel-item">
+                <img src="Gallery/Gallery9.jpg" class="d-block w-100 slide-img" data-bs-toggle="modal" data-bs-target="#imgModal" data-src="Gallery/Gallery9.jpg" alt="Gallery 9">
+            </div>
+        </div>
+
+        <!-- Prev/Next buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#churchSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#churchSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="imgModal" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-body p-0">
+                        <img id="modalImg" src="" class="w-100" alt="Zoomed Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainpage">
+
+    <!-- INTRODUCTION SECTION -->
+    <section class="intro-section">
+        <h1>Welcome to San Pancracio Parish</h1>
+        <div class="intro-divider"></div>
+        <p class="intro-text">
+            Established on <strong>October 11, 1962</strong> by the late Cardinal Rufino Santos, 
+            San Pancracio Parish stands as a beacon of faith within the La Loma Cemetery Compound, 
+            Grace Park, Caloocan City. Under the Diocese of Kalookan and the Vicariate of Our Lady 
+            of Grace, we proudly serve a community of over <strong>57,000 faithful</strong> — united 
+            in prayer, worship, and love for God and neighbor. Our mission is to bring the Church 
+            closer to the people through active ministry, sacramental life, and community outreach.
+        </p>
+    </section>
+
+    <!-- ABOUT THE HUB -->
+    <section class="hub-section">
+        <div class="hub-card">
+            <div class="hub-icon">&#9765;</div>
+            <h3>Our Mission</h3>
+            <p>To nurture a living community of faith through the sacraments, prayer, and active service — bringing the Gospel to every home in Caloocan.</p>
+        </div>
+        <div class="hub-card">
+            <div class="hub-icon">&#128591;</div>
+            <h3>Our Community</h3>
+            <p>With 14 lay associations and a vibrant Charismatic core group, San Pancracio Parish is home to a diverse and dedicated family of believers.</p>
+        </div>
+    </section>
+
+
+    <!-- Sched -->
+    <div class="mainpage">
+        <h1>Mass Schedule:</h1>
+        <table class="sched">
+            <tr>
+                <th>Time:</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <th>6:00AM-7:30AM</th>
+                <td colspan="7">Tagalog Mass</td>
+            </tr>
+            <tr>
+                <th>7:30AM-9:00AM</th>
+                <td colspan="6"></td>
+                <td>Tagalog Mass</td>
+            </tr>
+            <tr>
+                <th>9:00AM-10:30AM</th>
+                <td colspan="6"></td>
+                <td>Children's Mass</td>
+            </tr>
+            <tr>
+                <th>10:30AM-12:00PM</th>
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <th>12:00PM-1:30PM</th>
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <th>1:30PM-3:00-PM</th>
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <th>3:00PM-4:30PM</th>
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <th>4:30PM-6:00PM</th>
+                <td colspan="7"></td>
+            </tr>
+            <tr>
+                <th>6:00PM-7:30PM</th>
+                <td colspan="6"></td>
+                <td>English Mass</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Services -->
+    <div class="mainpage">
+        <h1>Services Offered:</h1>
+        <div class="services-cards">
+            <a href="Services/baptism.html">
+                <div class="service-card">Baptism Guidelines</div>
+            </a>
+            <a href="Services/confirmation.html">
+                <div class="service-card">Confirmation Guidelines</div>
+            </a>
+            <a href="Services/wedding.html">
+                <div class="service-card">Wedding Guidelines</div>
+            </a>
+            <a href="Services/funeral.html">
+                <div class="service-card">Funeral Guidelines</div>
+            </a>
+            <a href="Services/houseblessing.html">
+                <div class="service-card">House Blessing Guidelines</div>
+            </a>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <img src="sitemap.jpg" alt="Sitemap">
+        <div class="footer-text">
+            <p>Made by: Von Steven D. Bolivar</p>
+            <p>CS - BM14</p>
+            <p>A.Y. 2025-2026</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.slide-img').forEach(img => {
+        img.addEventListener('click', function() {
+            document.getElementById('modalImg').src = this.getAttribute('data-src');
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

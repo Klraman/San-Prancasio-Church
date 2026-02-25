@@ -1,0 +1,502 @@
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    filter: brightness(1.4);
+    color: #C41E3A;
+    font-weight: bolder;
+}
+
+body {
+    align-items: center;
+    background-color: #2E8B57;
+    background: radial-gradient(circle at center, #f5f5f0 0%, #f5f5f0 90%, black 150%);
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #2E8B57;
+    border: 5px solid #C41E3A;
+    color: #f5f5f0;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header img {
+    display: block;
+    flex-shrink: 0;
+    width: 20%;
+}
+
+header nav {
+    flex: 1;
+    text-align: center;
+    font-size: 0.85em;
+    padding: 8px;
+    line-height: 2;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2E8B57;
+    border: 5px solid #C41E3A;
+    color: #f5f5f0;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+}
+
+footer p {
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.footer-content img {
+    width: 90%;
+}
+
+.footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 2;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.hero h1 {
+    position: absolute;
+    font-size: 1.5em;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.mainpage {
+    color: #333333;
+    text-align: center;
+    padding: 25px;
+}
+
+.mainpage h1 {
+    font-size: 2.5em;
+}
+
+.mainpage h2 {
+    font-size: 1.8em;
+}
+
+.mainpage p {
+    font-size: 1em;
+}
+
+.mainpage img {
+    display: block;
+    margin: 0 auto;
+}
+
+.mainpage table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.mainpage table th, .mainpage table td {
+    font-size: 1em;
+}
+
+.slider-wrapper {
+    width: 100%;
+    margin: 2rem auto;
+    border: 3px solid #C41E3A;
+}
+
+.slider-wrapper .carousel-inner img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.slider-wrapper .carousel-control-prev,
+.slider-wrapper .carousel-control-next {
+    background-color: rgba(46, 139, 87, 0.7);
+    width: 5%;
+}
+
+.slider-wrapper .carousel-control-prev:hover,
+.slider-wrapper .carousel-control-next:hover {
+    background-color: #C41E3A;
+}
+
+.slide-img {
+    cursor: zoom-in;
+}
+
+.intro-section {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(46, 139, 87, 0.08);
+    border-left: 5px solid #2E8B57;
+    border-right: 5px solid #2E8B57;
+    border-radius: 4px;
+}
+
+.intro-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #2E8B57, #C41E3A);
+    margin: 1rem auto;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #333333;
+    text-align: justify;
+    font-family: Georgia, serif;
+}
+
+.hub-section {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hub-card {
+    background: white;
+    border-top: 4px solid #2E8B57;
+    border-bottom: 4px solid #C41E3A;
+    padding: 2rem 1.5rem;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 4px;
+}
+
+.hub-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hub-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2E8B57;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hub-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.sched {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    display: block;
+    overflow-x: auto;
+}
+
+.sched th {
+    background-color: #2E8B57;
+    color: #F5F5F0;
+    padding: 12px 16px;
+    border: 2px solid #C41E3A;
+    letter-spacing: 0.05em;
+}
+
+.sched td {
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #333333;
+}
+
+.sched tr:nth-child(even) {
+    background-color: #e8f5ee;
+}
+
+.sched tr:nth-child(odd) {
+    background-color: #F5F5F0;
+}
+
+.sched tr:hover {
+    background-color: #c8e6d4;
+}
+
+.sched tr td:first-child,
+.sched tr th:first-child {
+    background-color: #1e6640;
+    color: #F5F5F0;
+    font-weight: bold;
+    border-right: 2px solid #C41E3A;
+}
+
+.contact {
+    padding: 5%;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card {
+    background-color: #2E8B57;
+    color: #F5F5F0;
+    border: 3px solid #C41E3A;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    width: 80%;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    background-color: #C41E3A;
+    border-color: #2E8B57;
+}
+
+@media (min-width: 480px) {
+
+    .hub-section {
+        flex-direction: row;
+    }
+
+    header {
+        width: 90%;
+        flex-direction: row;
+        font-size: 1em;
+    }
+
+    header img {
+        width: 12%;
+    }
+
+    header nav {
+        font-size: 0.9em;
+        padding: 4px;
+        line-height: 1.8;
+    }
+
+    footer {
+        width: 90%;
+        font-size: 1.3em;
+    }
+
+    .footer-content {
+        flex-direction: row;
+    }
+
+    .footer-content img {
+        width: 200px;
+    }
+
+    .footer-text {
+        font-size: 1.3em;
+    }
+
+    .hero img {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+    }
+
+    .mainpage h1 {
+        font-size: 3.5em;
+    }
+
+    .mainpage h2 {
+        font-size: 2.2em;
+    }
+
+    .mainpage table {
+        width: 90%;
+    }
+
+    .mainpage table th, .mainpage table td {
+        font-size: 1.3em;
+    }
+
+    .slider-wrapper {
+        width: 90%;
+    }
+
+    .slider-wrapper .carousel-inner img {
+        height: 450px;
+    }
+
+    .sched {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        padding: 7%;
+        font-size: 1.5em;
+    }
+
+    .services-cards {
+        flex-direction: row;
+    }
+
+    .service-card {
+        width: 180px;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .hub-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hub-card {
+        width: 90%;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+    }
+
+    header {
+        width: 80%;
+        flex-direction: row;
+        font-size: 2em;
+    }
+
+    header img {
+        width: 8%;
+    }
+
+    header nav {
+        font-size: 1em;
+        padding: 0;
+        line-height: normal;
+    }
+
+    footer {
+        width: 80%;
+        font-size: 2em;
+    }
+
+    .footer-content {
+        flex-direction: row;
+    }
+
+    .footer-content img {
+        width: 200px;
+    }
+
+    .footer-text {
+        font-size: 2em;
+    }
+
+    .hero img {
+        width: 60%;
+        padding: 100px;
+        padding-bottom: 150px;
+    }
+
+    .hero h1 {
+        font-size: 4.5em;
+    }
+
+    .mainpage h1 {
+        font-size: 4em;
+    }
+
+    .mainpage h2 {
+        font-size: 2em;
+    }
+
+    .mainpage table {
+        width: 70%;
+    }
+
+    .mainpage table th, .mainpage table td {
+        font-size: 2em;
+    }
+
+    .slider-wrapper {
+        width: 50%;
+    }
+
+    .slider-wrapper .carousel-inner img {
+        height: 500px;
+    }
+
+    .sched {
+        width: 40%;
+        font-size: 0.5rem;
+        display: table;
+        overflow-x: unset;
+    }
+
+    .contact {
+        padding: 10%;
+        font-size: 2em;
+    }
+
+    .services-cards {
+        flex-direction: row;
+    }
+
+    .service-card {
+        width: 300px;
+        font-size: 2rem;
+    }
+}
