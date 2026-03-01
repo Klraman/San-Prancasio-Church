@@ -300,6 +300,34 @@ footer p {
     border-color: #2E8B57;
 }
 
+.clarification-bar {
+    background: linear-gradient(135deg, #2E8B57, #1e6640);
+    color: white;
+    padding: 1.2rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 4px;
+    border: 2px solid #C41E3A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.clarification-bar p {
+    margin: 0;
+    font-size: 1rem !important;
+    color: white !important;
+}
+
+.clarification-bar a {
+    color: #ffd700 !important;
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+
+.clarification-bar a:hover {
+    color: white !important;
+}
+
 @media (min-width: 480px) {
 
     .hub-section {
