@@ -3,79 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Overview</title>
+    <title>Services - San Pancracio Parish</title>
     <link href="../layout.css" rel="stylesheet">
+    <link href="../pages.css" rel="stylesheet">
     <link href="../services.css" rel="stylesheet">
-    <link href="../logo.jpg" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="../logo.jpg">
 </head>
 <body>
+
     <header>
         <img src="../logo.jpg" alt="logo" width="8%">
         <nav>
-            <a href="../index.html">Home</a> <br>
+            <a href="../Index.html">Home</a> <br>
             About us:
-            <a href="history.html">History of the Church</a> |
-            <a href="staff.html">Clergy and Staff</a> |
-            <a href="biography.html">Biography of San Prancasio</a> <br>
+            <a href="../About Us/history.html">History of the Church</a> |
+            <a href="../About Us/staff.html">Clergy and Staff</a> |
+            <a href="../About Us/biography.html">Biography of San Prancasio</a> <br>
             Services:
-            <a href="../Services/services.html"> Services Overview</a> |            
-            <a href="../Services/baptism.html">Baptism Guidelines</a> |
-            <a href="../Services/wedding.html">Wedding Guidelines</a> |
-            <a href="../Services/confirmation.html">Confirmation Guidelines</a> |
-            <a href="../Services/funeral.html">Funeral Guidelines</a> |
-            <a href="../Services/houseblessing.html">House Blessing Guidelines</a> <br>
+            <a href="services.html">Services Overview</a> |
+            <a href="baptism.html">Baptism</a> |
+            <a href="wedding.html">Wedding</a> |
+            <a href="confirmation.html">Confirmation</a> |
+            <a href="funeral.html">Funeral</a> |
+            <a href="houseblessing.html">House Blessing</a> |
+            <a href="providers.html">Service Providers</a> <br>
             <a href="../mass.html">Mass Schedule and Intentions</a> |
             <a href="../contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <div class="mainpage">
+    <div class="services-hero">
+        <span class="eyebrow">What We Offer</span>
         <h1>Sacraments &amp; Services</h1>
-        <div class="intro-divider"></div>
-        <p class="intro-text" style="max-width:800px; margin: 0 auto 2rem;">
-            San Pancracio Parish is honored to accompany you in the most sacred moments of your life. 
-            Below are the sacramental services we offer to our parishioners and the community. 
-            Click on any service to view the full requirements and guidelines.
+    </div>
+    <div class="gold-line"></div>
+
+    <div class="mainpage">
+        <p class="intro-text" style="max-width:800px; margin:0 auto 2rem;">
+            San Pancracio Parish accompanies you through every sacred milestone of life.
+            Below is a complete overview of our sacramental services, their requirements,
+            and how to schedule them. Click any service card or table link for full guidelines.
         </p>
 
+        <!-- SERVICE TILES -->
         <div class="services-grid">
-
             <a href="baptism.html" class="service-tile">
                 <div class="service-tile-icon">&#9830;</div>
                 <h3>Baptism</h3>
-                <p>Welcome your child into the family of God. Learn about requirements for infant and adult baptism.</p>
+                <p>Welcome your child into the family of God.</p>
                 <span class="tile-cta">View Guidelines &rarr;</span>
             </a>
-
             <a href="confirmation.html" class="service-tile">
                 <div class="service-tile-icon">&#9827;</div>
                 <h3>Confirmation</h3>
-                <p>Strengthen your faith through the Sacrament of Confirmation. See what documents are needed.</p>
+                <p>Strengthen your faith through the Holy Spirit.</p>
                 <span class="tile-cta">View Guidelines &rarr;</span>
             </a>
-
             <a href="wedding.html" class="service-tile">
                 <div class="service-tile-icon">&#9829;</div>
                 <h3>Wedding</h3>
-                <p>Begin your covenant of love in the Church. Full checklist of requirements for a Catholic wedding.</p>
+                <p>Begin your covenant of love in the Church.</p>
                 <span class="tile-cta">View Guidelines &rarr;</span>
             </a>
-
             <a href="funeral.html" class="service-tile">
                 <div class="service-tile-icon">&#9826;</div>
                 <h3>Funeral Mass</h3>
-                <p>Honor your loved ones with a proper Catholic funeral. Understand the rites and what to prepare.</p>
+                <p>Honor your loved ones with a proper Catholic funeral.</p>
                 <span class="tile-cta">View Guidelines &rarr;</span>
             </a>
-
             <a href="houseblessing.html" class="service-tile">
                 <div class="service-tile-icon">&#8962;</div>
                 <h3>House Blessing</h3>
-                <p>Invite God's grace into your home. Find out how to schedule a blessing with our parish priest.</p>
+                <p>Invite God's grace into your home.</p>
                 <span class="tile-cta">View Guidelines &rarr;</span>
             </a>
+            <a href="providers.html" class="service-tile">
+                <div class="service-tile-icon">&#9733;</div>
+                <h3>Service Providers</h3>
+                <p>Meet our parish ministries and communities.</p>
+                <span class="tile-cta">View Providers &rarr;</span>
+            </a>
+        </div>
 
+        <!-- SERVICES TABLE -->
+        <div class="services-table-section">
+            <h2>Quick Reference Table</h2>
+            <div class="intro-divider"></div>
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Who It's For</th>
+                        <th>Key Requirement</th>
+                        <th>Lead Time</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baptism</td>
+                        <td>Infants &amp; Adults</td>
+                        <td>PSA Birth Certificate, Godparent Certificates, Pre-Baptism Seminar</td>
+                        <td>1 month before</td>
+                        <td><a href="baptism.html">View &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td>Confirmation</td>
+                        <td>Youth &amp; Adults</td>
+                        <td>Baptismal Certificate, Catechesis Program</td>
+                        <td>Parish schedule</td>
+                        <td><a href="confirmation.html">View &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td>Wedding</td>
+                        <td>Catholic Couples</td>
+                        <td>CENOMAR, Marriage License, Pre-Cana Seminar</td>
+                        <td>6 months before</td>
+                        <td><a href="wedding.html">View &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td>Funeral Mass</td>
+                        <td>Deceased &amp; Family</td>
+                        <td>Death Certificate, parish office coordination</td>
+                        <td>ASAP upon death</td>
+                        <td><a href="funeral.html">View &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td>House Blessing</td>
+                        <td>Catholic Households</td>
+                        <td>Schedule via parish office, prepare altar &amp; candles</td>
+                        <td>1 week before</td>
+                        <td><a href="houseblessing.html">View &rarr;</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- IMAGE MAP -->
+        <div class="imagemap-section">
+            <h2>Navigate via Church Map</h2>
+            <div class="intro-divider"></div>
+            <p>Click on different areas of the church image below to go directly to each service page.</p>
+            <div class="map-container">
+                <img src="../main.jpg" alt="San Pancracio Parish Church" usemap="#parishmap" style="width:760px; max-width:100%;">
+            </div>
+            <map name="parishmap">
+                <area shape="rect" coords="0,0,760,120"
+                      href="baptism.html"
+                      alt="Baptism Guidelines"
+                      title="&#9830; Baptism — Click to view requirements">
+                <area shape="rect" coords="0,120,250,380"
+                      href="confirmation.html"
+                      alt="Confirmation Guidelines"
+                      title="&#9827; Confirmation — Click to view requirements">
+                <area shape="rect" coords="250,120,510,380"
+                      href="wedding.html"
+                      alt="Wedding Guidelines"
+                      title="&#9829; Wedding — Click to view requirements">
+                <area shape="rect" coords="510,120,760,380"
+                      href="funeral.html"
+                      alt="Funeral Guidelines"
+                      title="&#9826; Funeral — Click to view requirements">
+                <area shape="rect" coords="0,380,760,600"
+                      href="houseblessing.html"
+                      alt="House Blessing Guidelines"
+                      title="&#8962; House Blessing — Click to view requirements">
+            </map>
+            <p class="map-hint">&#9432; Top = Baptism &nbsp;|&nbsp; Left = Confirmation &nbsp;|&nbsp; Center = Wedding &nbsp;|&nbsp; Right = Funeral &nbsp;|&nbsp; Bottom = House Blessing</p>
         </div>
 
         <div class="clarification-bar">

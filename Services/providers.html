@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Providers - San Pancracio Parish</title>
+    <link href="../layout.css" rel="stylesheet">
+    <link href="../pages.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="../logo.jpg">
+    <style>
+        /* ── FLOAT (required CSS3 feature) ───────────── */
+        .provider-float-img {
+            float: left;
+            width: 120px;
+            margin: 0 1.2rem 0.5rem 0;
+            border-radius: 8px;
+            border: 3px solid #2E8B57;
+            opacity: 0.92;
+            transition: opacity 0.3s;
+        }
+        .provider-float-img:hover { opacity: 1; }
+
+        /* ── PROVIDERS HERO ───────────────────────────── */
+        .providers-hero {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-image: url('../main.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 3rem 2rem;
+        }
+        .providers-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(30,102,64,0.85));
+        }
+        .providers-hero span, .providers-hero h1 { position: relative; z-index: 2; }
+        .providers-hero .eyebrow {
+            font-family: Arial, sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #c9a84c;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .providers-hero h1 {
+            font-family: Arial, sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: white;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        /* ── PROVIDER CARDS ───────────────────────────── */
+        .providers-section {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .providers-section h2 {
+            font-family: Arial, sans-serif;
+            font-size: 1.6rem;
+            color: #2E8B57;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .provider-card {
+            background: white;
+            border-radius: 6px;
+            border-left: 5px solid #2E8B57;
+            border-right: 5px solid #C41E3A;
+            /* shadow effect */
+            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            /* multiple backgrounds */
+            background: linear-gradient(135deg, rgba(46,139,87,0.04) 0%, white 40%);
+        }
+
+        .provider-card h3 {
+            font-family: Arial, sans-serif;
+            color: #1e6640;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.4rem;
+            clear: both;
+        }
+
+        .provider-card p {
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .clearfix::after { content: ''; display: table; clear: both; }
+
+        /* ── GALLERY SECTION ──────────────────────────── */
+        .gallery-section {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 0 1.5rem;
+        }
+
+        .gallery-section h2 {
+            font-family: Arial, sans-serif;
+            font-size: 1.6rem;
+            color: #2E8B57;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        /* ── GALLERY ITEM — hover + animation ─────────── */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            /* rounded corners */
+            border: 3px solid transparent;
+            cursor: zoom-in;
+            /* shadow */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            /* animation on load */
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        /* stagger animation delays */
+        .gallery-item:nth-child(1) { animation-delay: 0.05s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.10s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.15s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.20s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.25s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.30s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.35s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.40s; }
+        .gallery-item:nth-child(9) { animation-delay: 0.45s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            /* opacity */
+            opacity: 0.88;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            border-color: #C41E3A;
+            box-shadow: 0 6px 20px rgba(196,30,58,0.25);
+        }
+
+        /* overlay on hover */
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            /* RGBA color */
+            background: rgba(46, 139, 87, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            background: rgba(46, 139, 87, 0.35);
+        }
+
+        .gallery-overlay span {
+            color: white;
+            font-size: 2rem;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay span {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ── LIGHTBOX ─────────────────────────────────── */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .lightbox-overlay.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border: 4px solid white;
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            animation: zoomIn 0.25s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1.2rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 10000;
+            transition: color 0.2s;
+        }
+        .lightbox-close:hover { color: #C41E3A; }
+
+        /* ── SPINNING LOGO (animated image) ──────────── */
+        @keyframes gentleSpin {
+            0%   { transform: rotate(0deg);   }
+            50%  { transform: rotate(8deg);   }
+            100% { transform: rotate(0deg);   }
+        }
+
+        .animated-logo {
+            animation: gentleSpin 4s ease-in-out infinite;
+            display: block;
+            margin: 0 auto 1rem;
+            width: 80px;
+            /* opacity */
+            opacity: 0.9;
+        }
+
+        /* ── ATTRIBUTE SELECTORS (required CSS3) ─────── */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            border-bottom: 2px solid #2E8B57;
+        }
+
+        a[href^="mailto"] {
+            color: #2E8B57 !important;
+            text-decoration: underline !important;
+        }
+
+        a[href^="tel"] {
+            color: #1e6640 !important;
+        }
+
+        /* ── GOLD DIVIDER ─────────────────────────────── */
+        .gold-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+            margin: 2rem 0;
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────── */
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item img { height: 140px; }
+            .provider-float-img { float: none; width: 100%; margin: 0 0 1rem; }
+            .providers-hero { padding: 0 1.5rem 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="../logo.jpg" alt="logo" width="8%">
+        <nav>
+            <a href="../Index.html">Home</a> <br>
+            About us:
+            <a href="../About Us/history.html">History of the Church</a> |
+            <a href="../About Us/staff.html">Clergy and Staff</a> |
+            <a href="../About Us/biography.html">Biography of San Prancasio</a> <br>
+            Services:
+            <a href="services.html">Services Overview</a> |
+            <a href="baptism.html">Baptism</a> |
+            <a href="wedding.html">Wedding</a> |
+            <a href="confirmation.html">Confirmation</a> |
+            <a href="funeral.html">Funeral</a> |
+            <a href="houseblessing.html">House Blessing</a> |
+            <a href="providers.html">Service Providers</a> <br>
+            <a href="../mass.html">Mass Schedule and Intentions</a> |
+            <a href="../contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="providers-hero">
+        <span class="eyebrow">Meet the Community</span>
+        <h1>Service Providers</h1>
+    </div>
+
+    <div class="gold-line"></div>
+
+    <!-- ANIMATED LOGO -->
+    <img src="../logo.jpg" alt="Parish Logo" class="animated-logo">
+
+    <!-- PROVIDER PROFILES -->
+    <div class="providers-section">
+        <h2>Our Parish Ministry Categories</h2>
+        <div class="intro-divider"></div>
+
+        <div class="provider-card clearfix">
+            <img src="../Gallery/Gallery1.jpg" alt="Liturgical Ministry" class="provider-float-img">
+            <h3>&#9829; Liturgical &amp; Sacramental Ministry</h3>
+            <p>Our Liturgical Ministry oversees the celebration of all seven sacraments — from the joyful Baptism of newborns to the sacred Anointing of the Sick. Our trained ministers, lectors, altar servers, and Extraordinary Ministers of Holy Communion ensure every Mass is celebrated with dignity and reverence. The team coordinates directly with the Parish Priest for all sacramental preparations and scheduling.</p>
+        </div>
+
+        <div class="provider-card clearfix">
+            <img src="../Gallery/Gallery2.jpg" alt="Youth Ministry" class="provider-float-img">
+            <h3>&#9827; Youth &amp; Young Adults Ministry</h3>
+            <p>San Pancracio's Youth Ministry (KYC — Kabataang Yesus Christos) is a vibrant group dedicated to forming young Catholics in faith, service, and community. They organize retreats, recollections, outreach programs, and youth Masses. Every young person in the parish is welcome — from high school students to young professionals — to grow in their faith journey together.</p>
+        </div>
+
+        <div class="provider-card clearfix">
+            <img src="../Gallery/Gallery3.jpg" alt="Charismatic Renewal" class="provider-float-img">
+            <h3>&#9733; Catholic Charismatic Renewal</h3>
+            <p>The Charismatic Renewal community at San Pancracio is one of the most active groups in the parish. They conduct Life in the Spirit Seminars, healing Masses, prayer meetings, and home prayer gatherings. Known for their joyful and Spirit-filled worship, they are at the forefront of evangelization and parish renewal efforts throughout Caloocan.</p>
+        </div>
+
+        <div class="provider-card clearfix">
+            <img src="../Gallery/Gallery4.jpg" alt="Basic Ecclesial Community" class="provider-float-img">
+            <h3>&#8962; Basic Ecclesial Communities (BEC)</h3>
+            <p>The BEC structure divides the parish into smaller neighborhood faith communities, each led by a lay coordinator. These communities hold block rosaries, Bible sharing sessions, and community meetings. They are the backbone of the parish's pastoral work — bringing the Church directly into the homes and streets of Grace Park, Caloocan.</p>
+        </div>
+
+        <div class="provider-card clearfix">
+            <img src="../Gallery/Gallery5.jpg" alt="Parish Outreach" class="provider-float-img">
+            <h3>&#10024; Caritas &amp; Social Action Ministry</h3>
+            <p>Inspired by Catholic Social Teaching, our Caritas ministry reaches out to the poor and marginalized in the La Loma area. They organize feeding programs, medical missions, scholarship assistance, and relief operations during calamities. The ministry works in partnership with the Diocese of Kalookan's social action office and various civic organizations.</p>
+        </div>
+
+    </div>
+
+    <div class="gold-line"></div>
+
+    <!-- GALLERY -->
+    <div class="gallery-section">
+        <h2>Parish Photo Gallery</h2>
+        <div class="intro-divider"></div>
+        <p style="text-align:center; color:#555; font-size:0.9rem; margin-bottom:1.5rem;">Click any photo to view full size</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery1.jpg')">
+                <img src="../Gallery/Gallery1.jpg" alt="Parish Gallery 1">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery2.jpg')">
+                <img src="../Gallery/Gallery2.jpg" alt="Parish Gallery 2">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery3.jpg')">
+                <img src="../Gallery/Gallery3.jpg" alt="Parish Gallery 3">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery4.jpg')">
+                <img src="../Gallery/Gallery4.jpg" alt="Parish Gallery 4">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery5.jpg')">
+                <img src="../Gallery/Gallery5.jpg" alt="Parish Gallery 5">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery6.jpg')">
+                <img src="../Gallery/Gallery6.jpg" alt="Parish Gallery 6">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery7.jpg')">
+                <img src="../Gallery/Gallery7.jpg" alt="Parish Gallery 7">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery8.jpg')">
+                <img src="../Gallery/Gallery8.jpg" alt="Parish Gallery 8">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../Gallery/Gallery9.jpg')">
+                <img src="../Gallery/Gallery9.jpg" alt="Parish Gallery 9">
+                <div class="gallery-overlay"><span>&#128269;</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg" src="" alt="Full size image">
+    </div>
+
+    <div class="clarification-bar" style="max-width:1100px; margin: 0 auto 2rem;">
+        <p>&#128222; Want to get involved with any of our ministries? <a href="../contact.html">Contact the Parish Office</a> or visit us in person.</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="../sitemap.jpg" alt="Sitemap">
+            <div class="footer-text">
+                <p>Made by: Von Steven D. Bolivar</p>
+                <p>CS - BM10</p>
+                <p>A.Y. 2025-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
