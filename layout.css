@@ -18,15 +18,15 @@ body {
 
 header {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #2E8B57;
+    background: linear-gradient(to top, #2E8B57, #1e6640);
     border: 5px solid #C41E3A;
     color: #f5f5f0;
-    font-size: 0.8em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,16 +39,16 @@ header img {
 header nav {
     flex: 1;
     text-align: center;
-    font-size: 0.85em;
+    font-size: 1.5em !important;
     padding: 8px;
     line-height: 2;
 }
 
 footer {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
-    background-color: #2E8B57;
+    background: linear-gradient(to bottom, #2E8B57, #1e6640);
     border: 5px solid #C41E3A;
     color: #f5f5f0;
     font-size: 1em;
@@ -203,11 +203,6 @@ footer p {
     border-radius: 4px;
 }
 
-.hub-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-}
-
 .hub-card h3 {
     font-family: Arial, Helvetica, sans-serif;
     color: #2E8B57;
@@ -312,7 +307,7 @@ footer p {
     }
 
     header {
-        width: 90%;
+        width: 100%;
         flex-direction: row;
         font-size: 1em;
     }
@@ -328,7 +323,7 @@ footer p {
     }
 
     footer {
-        width: 90%;
+        width: 100%;
         font-size: 1.3em;
     }
 
@@ -396,26 +391,25 @@ footer p {
     }
 }
 
-
 @media (min-width: 768px) {
 
     .hub-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: stretch;
     }
 
     .hub-card {
-        width: 90%;
+        width: 280px;
     }
 
     .intro-text {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 
     header {
-        width: 80%;
+        width: 100%;
         flex-direction: row;
-        font-size: 2em;
+        font-size: 1.2em;
     }
 
     header img {
@@ -423,14 +417,14 @@ footer p {
     }
 
     header nav {
-        font-size: 1em;
-        padding: 0;
-        line-height: normal;
+        font-size: 0.85em;
+        padding: 0 1rem;
+        line-height: 1.8;
     }
 
     footer {
-        width: 80%;
-        font-size: 2em;
+        width: 100%;
+        font-size: 1.5em;
     }
 
     .footer-content {
@@ -442,7 +436,7 @@ footer p {
     }
 
     .footer-text {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .hero img {
@@ -472,7 +466,7 @@ footer p {
     }
 
     .slider-wrapper {
-        width: 50%;
+        width: 80%;
     }
 
     .slider-wrapper .carousel-inner img {
@@ -480,8 +474,8 @@ footer p {
     }
 
     .sched {
-        width: 40%;
-        font-size: 0.5rem;
+        width: 80%;
+        font-size: 0.9rem;
         display: table;
         overflow-x: unset;
     }
