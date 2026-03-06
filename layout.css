@@ -355,7 +355,7 @@ footer p { padding: 10px; }
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -367,7 +367,7 @@ footer p { padding: 10px; }
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding: 2rem 1.5rem;
-    width: 180px;
+    width: 250px;
     text-align: center;
     text-decoration: none !important;
     color: #333333 !important;
