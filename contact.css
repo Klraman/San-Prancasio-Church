@@ -141,8 +141,6 @@
 }
 
 @media (max-width: 600px) {
-    .contact-hero { padding-left: 1.5rem; height: 200px; }
-    .breadcrumb-row { left: 1.5rem; }
     .form-row { flex-direction: column; gap: 0.8rem; }
     .office-strip { gap: 1.2rem; }
 }
