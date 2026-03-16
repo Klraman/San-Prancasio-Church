@@ -25,7 +25,6 @@
     padding: 12px 16px;
     border: 2px solid #C41E3A;
     text-align: left;
-    font-size: 1.2rem !important;
     letter-spacing: 0.05em;
 }
 .services-table td {
@@ -375,12 +374,14 @@ input[type="tel"] {
     border-bottom: 2px solid #2E8B57;
 }
 
-a[href^="mailto"] {
+.contact-body a[href^="mailto"],
+.contact-intro a[href^="mailto"] {
     color: #2E8B57 !important;
     text-decoration: underline !important;
 }
 
-a[href^="tel"] {
+.contact-body a[href^="tel"],
+.contact-intro a[href^="tel"] {
     color: #1e6640 !important;
 }
 
@@ -395,7 +396,8 @@ a[href^="tel"] {
     }
 
     .service-tile {
-        width: 80%;
+        flex: 1 1 80%;
+        max-width: 90%;
     }
 
     .services-grid {
@@ -406,6 +408,7 @@ a[href^="tel"] {
 
 @media (min-width: 701px) and (max-width: 1024px) {
     .service-tile {
-        width: 160px;
+        flex: 1 1 160px;
+        max-width: 200px;
     }
 }

@@ -7,28 +7,58 @@
     <link href="../layout.css" rel="stylesheet">
     <link href="../services.css" rel="stylesheet">
     <link href="../logo.jpg" rel="icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+        <!-- TOP BANNER -->
+    <div class="top-banner">
+        <span>&#9679;&nbsp; Daily Mass: 6:00 AM &bull; Sunday: 7:30 AM &bull; 9:00 AM &bull; 6:00 PM (English)</span>
+        <span class="top-banner-right">
+            <a href="tel:+63286550003">&#128222; (02) 8655-0003</a>
+            <span class="sep">|</span>
+            <a href="mailto:sanpancracioparish62@gmail.com">&#9993; sanpancracioparish62@gmail.com</a>
+        </span>
+    </div>
     <header>
-        <img src="../logo.jpg" alt="logo" width="8%">
-        <nav>        
-            <a href="../index.html">Home</a> <br> 
-            About us:
-            <a href="../About Us/history.html">History of the Church</a> |
-            <a href="../About Us/staff.html">Clergy and Staff</a> |
-            <a href="../About Us/biography.html">Biography of San Prancacio</a> <br>
-            Services:
-            <a href="services.html">Services Overview</a> |
-            <a href="providers.html">Service Providers </a> |
-            <a href="baptism.html">Baptism Guidelines</a> | 
-            <a href="wedding.html">Wedding Guidelines</a> | 
-            <a href="confirmation.html">Confirmation Guidelines</a> |
-            <a href="funeral.html">Funeral Guidelines</a> | 
-            <a href="houseblessing.html">House Blessing Guidelines</a> <br>
-            <a href="../mass.html">Mass Schedule and Intentions</a> |
-            <a href="../contact.html">Contact Us</a>
+        <nav class="main-nav">
+            <a href="../index.html" class="logo" aria-label="San Pancracio Parish Home">
+                <div class="logo-icon">
+                    <img src="../logo.jpg" alt="San Pancracio">
+                </div>
+                <div class="logo-text">
+                    <span class="parish-name">San Pancracio Parish</span>
+                    <span class="parish-sub">Faith, Hope &amp; Charity in Caloocan</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
+                <li role="none">
+                    <button class="nav-btn" aria-haspopup="true" role="menuitem">About <span class="arrow">&#9660;</span></button>
+                    <ul class="nav-dropdown" role="menu" aria-label="About submenu">
+                        <li role="none"><a href="../About Us/history.html" role="menuitem">History of the Church</a></li>
+                        <li role="none"><a href="../About Us/staff.html" role="menuitem">Clergy &amp; Staff</a></li>
+                        <li role="none"><a href="../About Us/biography.html" role="menuitem">Biography of San Pancracio</a></li>
+                    </ul>
+                </li>
+                <li role="none">
+                    <button class="nav-btn" aria-haspopup="true" role="menuitem">Sacraments <span class="arrow">&#9660;</span></button>
+                    <ul class="nav-dropdown" role="menu" aria-label="Sacraments submenu">
+                        <li role="none"><a href="services.html" role="menuitem">Services Overview</a></li>
+                        <li role="none"><a href="baptism.html" role="menuitem">Baptism</a></li>
+                        <li role="none"><a href="confirmation.html" role="menuitem">Confirmation</a></li>
+                        <li role="none"><a href="wedding.html" role="menuitem">Wedding</a></li>
+                        <li role="none"><a href="funeral.html" role="menuitem">Funeral Mass</a></li>
+                        <li role="none"><a href="houseblessing.html" role="menuitem">House Blessing</a></li>
+                        <li role="none"><a href="providers.html" role="menuitem">Service Providers</a></li>
+                    </ul>
+                </li>
+                <li role="none"><a href="../mass.html" role="menuitem">Mass &amp; Intentions</a></li>
+                <li role="none"><a href="../contact.html" role="menuitem">Contact</a></li>
+            </ul>
         </nav>
+        <div class="gold-line"></div>
     </header>
 
     <div class="mainpage">
@@ -46,14 +76,14 @@
                     <p>Having a home blessed by a parish priest is a deeply cherished Filipino Catholic tradition. A house blessing invites God's grace into your dwelling and is a meaningful act of thanksgiving — recognizing that your home is a gift from God and a place where faith and family are nurtured.</p>
                 </div>
 
-              <div class="guideline-section">
+                <div class="guideline-section">
                     <h3>How to Schedule a House Blessing</h3>
                     <ol>
-                        <li><strong>Visit the Parish Office</strong> at least <strong>one week before</strong> your intended date to check the Parish Priest's availability</li>
-                        <li><strong>Confirm the Date and Time</strong> with the parish office — rules and availability vary, so early coordination is important</li>
-                        <li><strong>Prepare Your Home</strong> — clean and tidy your home before the priest arrives; all household members should make every effort to be present</li>
-                        <li><strong>Set Up the Blessing Area</strong> — on your dining room table, prepare a small altar with a crucifix, candles, and a bowl or pitcher of water</li>
-                        <li><strong>The Blessing</strong> — the priest will offer a prayer, read from Scripture, and go room-to-room sprinkling holy water throughout the home</li>
+                        <li><strong>Step 1 — Visit the Parish Office</strong> at least <strong>one week before</strong> your intended date to check the Parish Priest's availability</li>
+                        <li><strong>Step 2 — Confirm the Date and Time</strong> with the parish office — rules and availability vary, so early coordination is important</li>
+                        <li><strong>Step 3 — Prepare Your Home</strong> — clean and tidy your home before the priest arrives; all household members should make every effort to be present</li>
+                        <li><strong>Step 4 — Set Up the Blessing Area</strong> — on your dining room table, prepare a small altar with a crucifix, candles, and a bowl or pitcher of water</li>
+                        <li><strong>Step 5 — The Blessing</strong> — the priest will offer a prayer, read from Scripture, and go room-to-room sprinkling holy water throughout the home</li>
                     </ol>
                 </div>
 
@@ -88,14 +118,14 @@
                     <p>Ang pagpapala ng bahay ng isang pari ng parokya ay isang malalim na pinahahalagahang tradisyon ng mga Pilipinong Katoliko. Ang pagpapala ng bahay ay nag-aanyaya ng biyaya ng Diyos sa inyong tirahan at isang makabuluhang kilos ng pagpapasalamat — kinikilala na ang inyong tahanan ay isang regalo mula sa Diyos at isang lugar kung saan pinalago ang pananampalataya at pamilya.</p>
                 </div>
 
-              <div class="guideline-section">
+                <div class="guideline-section">
                     <h3>Paano Mag-iskedyul ng Pagpapala ng Bahay</h3>
                     <ol>
-                        <li><strong>Bisitahin ang Tanggapan ng Parokya</strong> nang hindi bababa sa <strong>isang linggo bago</strong> ang inyong planong petsa upang suriin ang pagkakaroon ng Parish Priest</li>
-                        <li><strong>Kumpirmahin ang Petsa at Oras</strong> sa tanggapan ng parokya — ang mga patakaran at pagkakaroon ay nagbabago-bago, kaya mahalaga ang maagang koordinasyon</li>
-                        <li><strong>Ihanda ang Inyong Bahay</strong> — linisin at ayusin ang inyong bahay bago dumating ang pari; lahat ng miyembro ng sambahayan ay dapat gawin ang lahat ng pagsisikap na maroroon</li>
-                        <li><strong>I-set Up ang Lugar ng Pagpapala</strong> — sa inyong mesa sa hapagkainan, maghanda ng maliit na altar na may krus, kandila, at mangkok o pitsel ng tubig</li>
-                        <li><strong>Ang Pagpapala</strong> — mag-aalok ang pari ng panalangin, magbabasa mula sa Banal na Kasulatan, at pupunta sa bawat silid na nagwiwisik ng banal na tubig sa buong bahay</li>
+                        <li><strong>Hakbang 1 — Bisitahin ang Tanggapan ng Parokya</strong> nang hindi bababa sa <strong>isang linggo bago</strong> ang inyong planong petsa upang suriin ang pagkakaroon ng Parish Priest</li>
+                        <li><strong>Hakbang 2 — Kumpirmahin ang Petsa at Oras</strong> sa tanggapan ng parokya — ang mga patakaran at pagkakaroon ay nagbabago-bago, kaya mahalaga ang maagang koordinasyon</li>
+                        <li><strong>Hakbang 3 — Ihanda ang Inyong Bahay</strong> — linisin at ayusin ang inyong bahay bago dumating ang pari; lahat ng miyembro ng sambahayan ay dapat gawin ang lahat ng pagsisikap na maroroon</li>
+                        <li><strong>Hakbang 4 — I-set Up ang Lugar ng Pagpapala</strong> — sa inyong mesa sa hapagkainan, maghanda ng maliit na altar na may krus, kandila, at mangkok o pitsel ng tubig</li>
+                        <li><strong>Hakbang 5 — Ang Pagpapala</strong> — mag-aalok ang pari ng panalangin, magbabasa mula sa Banal na Kasulatan, at pupunta sa bawat silid na nagwiwisik ng banal na tubig sa buong bahay</li>
                     </ol>
                 </div>
 
@@ -138,5 +168,40 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks  = document.getElementById('navLinks');
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    /* Mobile: tap dropdown trigger to expand/collapse */
+    navLinks.querySelectorAll('.nav-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+                var li = btn.closest('li');
+                li.classList.toggle('mob-open');
+            }
+        });
+    });
+
+    /* Close menu when any link is clicked */
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body>
 </html>
