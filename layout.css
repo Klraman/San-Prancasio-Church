@@ -96,8 +96,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 0.4rem;
 }
-.top-banner a { color: rgba(255,255,255,0.82) !important; text-decoration: none !important; }
-.top-banner a:hover { color: #fff !important; filter: none; font-weight: normal; }
+.top-banner a { color: rgba(255,255,255,0.82); text-decoration: none !important; }
+.top-banner a:hover { color: #fff; filter: none; font-weight: normal; }
 .top-banner .sep { margin: 0 0.5rem; opacity: 0.35; }
 .top-banner-right { white-space: nowrap; }
 
@@ -417,8 +417,23 @@ footer p { padding: 10px; }
     width: 80%;
     /* opacity */
     opacity: 0.97;
-    border: 35px solid transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* Border-image as overlay — sits on top of the image edges like a picture frame */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    border: 40px solid transparent;
     border-image: url("border.png") 40 round;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -715,6 +730,7 @@ footer p { padding: 10px; }
     .footer-text { font-size: 1.3em; }
 
     .hero img { width: 90%; }
+    .hero::after { width: 90%; }
     .hero h1  { font-size: 4em; }
 
     .mainpage h1 { font-size: 3.5em; }
@@ -747,6 +763,7 @@ footer p { padding: 10px; }
     .footer-text { font-size: 1.5em; }
 
     .hero img { width: 60%; padding: 100px; padding-bottom: 150px; }
+    .hero::after { width: 60%; }
     .hero h1  { font-size: 4.5em; }
 
     .mainpage h1 { font-size: 4em; }
