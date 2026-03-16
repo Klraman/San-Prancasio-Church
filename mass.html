@@ -115,6 +115,71 @@
         </table>
     </div>
 
+<div class="mainpage">
+        <div class="intro-divider"></div>
+        <h1>Submit a Mass Intention</h1>
+        <div class="intro-divider"></div>
+        <p class="intro-text" style="max-width:700px; margin:0 auto 1.5rem;">
+            A Mass Intention is an offering to have a specific Mass celebrated for a particular
+            purpose — for the repose of a loved one's soul, for a special occasion, or in
+            thanksgiving. Fill out the form below and our parish office will contact you to
+            confirm the schedule and love offering.
+        </p>
+ 
+        <div class="intentions-form-wrapper">
+ 
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="int-fname" placeholder="First Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="int-lname" placeholder="Last Name *" required>
+                </div>
+            </div>
+ 
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="email" id="int-email" placeholder="Email Address *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="int-phone" placeholder="Contact Number">
+                </div>
+            </div>
+ 
+            <div class="form-group">
+                <select id="int-type" onchange="this.classList.add('selected')" required>
+                    <option value="" disabled selected>Type of Intention *</option>
+                    <option value="repose">For the Repose of the Soul (deceased)</option>
+                    <option value="living">For a Living Person (health, intentions)</option>
+                    <option value="thanksgiving">Thanksgiving</option>
+                    <option value="special">Special Occasion (birthday, anniversary)</option>
+                    <option value="general">General Intention</option>
+                </select>
+            </div>
+ 
+            <div class="form-group">
+                <input type="text" id="int-name" placeholder="Name to be Remembered / Prayed For *" required>
+            </div>
+ 
+            <div class="form-group">
+                <select id="int-mass" onchange="this.classList.add('selected')" required>
+                    <option value="" disabled selected>Preferred Mass Schedule *</option>
+                    <option value="mon-fri-6am">Mon–Fri — 6:00 AM (Tagalog)</option>
+                    <option value="sun-730am">Sunday — 7:30 AM (Tagalog)</option>
+                    <option value="sun-9am">Sunday — 9:00 AM (Children's Mass)</option>
+                    <option value="sun-6pm">Sunday — 6:00 PM (English)</option>
+                </select>
+            </div>
+ 
+            <div class="form-group">
+                <textarea id="int-message" placeholder="Additional Notes or Special Requests"></textarea>
+            </div>
+ 
+            <button class="btn-submit" id="int-submit" type="button">Submit Intention</button>
+ 
+        </div>
+    </div>
+ 
     <div class="clarification-bar">
         <p>&#10067; Kailangan ng karagdagang impormasyon? / Need more clarification? <a href="contact.html">Bisitahin ang aming pahina ng Makipag-ugnayan / Visit our Contact Us page</a>.</p>
     </div>
@@ -129,19 +194,19 @@
             </div>
         </div>
     </footer>
-
+ 
 <script>
 (function () {
     var hamburger = document.getElementById('hamburger');
     var navLinks  = document.getElementById('navLinks');
     if (!hamburger || !navLinks) return;
-
+ 
     hamburger.addEventListener('click', function () {
         var isOpen = navLinks.classList.toggle('open');
         hamburger.classList.toggle('open', isOpen);
         hamburger.setAttribute('aria-expanded', String(isOpen));
     });
-
+ 
     /* Mobile: tap dropdown trigger to expand/collapse */
     navLinks.querySelectorAll('.nav-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -151,7 +216,7 @@
             }
         });
     });
-
+ 
     /* Close menu when any link is clicked */
     navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
@@ -160,6 +225,126 @@
             hamburger.setAttribute('aria-expanded', 'false');
         });
     });
+})();
+</script>
+ 
+<style>
+.intentions-form-wrapper {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+}
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+.form-row .form-group { flex: 1; margin-bottom: 0; }
+.form-group { margin-bottom: 0.8rem; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: #e4e4df;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 13px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    border-radius: 2px;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #777; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    background: #d8d8d3;
+    border-bottom-color: #2E8B57;
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+    color: #777;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+}
+.form-group select.selected { color: #333; }
+.btn-submit {
+    display: block;
+    margin: 1.5rem auto 0;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 13px 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-submit:hover {
+    background-color: #C41E3A;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(196,30,58,0.35);
+}
+.field-error {
+    color: #C41E3A;
+    font-size: 0.75rem;
+    margin: 3px 0 0;
+    font-family: Arial, sans-serif;
+}
+@media (max-width: 600px) {
+    .form-row { flex-direction: column; gap: 0.6rem; }
+}
+</style>
+ 
+<script>
+(function () {
+    var emailInput  = document.getElementById('int-email');
+    var phoneInput  = document.getElementById('int-phone');
+    var submitBtn   = document.getElementById('int-submit');
+ 
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9+\-() ]/g, '');
+        });
+    }
+ 
+    if (emailInput) {
+        emailInput.addEventListener('blur', function () {
+            this.style.borderBottomColor = (this.value && !this.value.includes('@')) ? '#C41E3A' : '';
+        });
+    }
+ 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function () {
+            var email  = emailInput ? emailInput.value : '';
+            var errors = [];
+ 
+            if (email && !email.includes('@'))
+                errors.push('Email address must contain "@".');
+ 
+            var required = ['int-fname','int-lname','int-email','int-type','int-name','int-mass'];
+            required.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el && !el.value.trim()) {
+                    el.style.borderBottomColor = '#C41E3A';
+                    if (!errors.length) errors.push('Please fill in all required fields (marked with *).');
+                }
+            });
+ 
+            if (errors.length) { alert(errors[0]); return; }
+            alert('Your Mass Intention has been submitted! Our parish office will contact you to confirm the schedule.');
+        });
+    }
 })();
 </script>
 </body>
